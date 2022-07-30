@@ -4,12 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <title>Alura Challenge - Oracle ONE Juego del Ahorcado</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:wght@300&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-<header></header>
-<main></main>
-<footer></footer>
+
+<header>
+    <section id="logo-alura">
+        <img src="img/logo.png" alt="Logo">
+    </section>
+</header>
+
+<main>
+
+    <section id="seccion-menu-inicio">
+        <div id="contenedor-botones-menu-inicio">
+            <button id="boton-iniciar-juego" class="boton">Iniciar juego</button>
+            <button id="boton-menu-agregar-nueva-palabra" class="boton">Agregar nueva palabra</button>
+        </div>
+    </section>
+
+    <section id="seccion-tablero-juego" class="ocultar">
+        <div id="contenedor-tablero-juego">
+            <div id="contenedor-horca"></div>
+
+            <div id="contenedor-letras">
+                <div id="contenedor-letras-palabra-secreta"></div>
+                <div id="contenedor-letras-incorrectas"></div>
+            </div>
+
+            <span id="mensaje-fin-del-juego" class="ocultar"></span>
+
+            <div id="contenedor-botones-tablero-juego">
+                <button id="boton-nuevo-juego">Nuevo juego</button>
+                <button id="boton-desistir">Desistir</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="seccion-agregar-palabra" class="ocultar">
+        <form id="form-agregar-palabra">
+            <div id="contenedor-texto-agregar-palabra">
+                <label for="area-texto-agregar-palabra"></label>
+                <textarea id="area-texto-agregar-palabra" maxlength="8" placeholder="Ingrese una palabra"></textarea>
+            </div>
+
+            <span id="mensaje-estado-palabra-agregada"></span>
+
+            <div id="contenedor-contrato-nueva-palabra">
+                <img src="img/signo-exclamacion.png" alt="!" id="circulo-exclamacion">
+                <p id="contrato-texto-introducido">Máx. de 8 letras</p>
+            </div>
+
+            <div id="contenedor-botones-agregar-palabra">
+                <button id="boton-guardar-nueva-palabra">Agregar palabra</button>
+                <button id="boton-volver-al-menu-inicio">Volver al menú</button>
+            </div>
+        </form>
+    </section>
+
+</main>
+
+<script src="js/variables-de-elementos-html.js"></script>
+<script src="js/variables-del-juego.js"></script>
+<script src="js/menu-inicio.js"></script>
+<script src="js/tablero-juego.js"></script>
+<script src="js/menu-agregar-nueva-palabra.js"></script>
+<script src="js/dibujo-ahorcado.js"></script>
+
+
+<footer>
+    <section id="seccion-copyright">
+        <h2>
+            &copy; 2022 - Juan Elías Ribeiro
+        </h2>
+    </section>
+</footer>
 </body>
 
 </html>
