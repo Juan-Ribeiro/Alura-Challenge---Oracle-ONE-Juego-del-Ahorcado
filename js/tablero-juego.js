@@ -30,6 +30,7 @@ function limpiarContenedorTablero() {
     contenedorLetrasPalabraSecreta.innerHTML = "";
     contenedorLetrasIncorrectas.innerHTML = "";
     contenedorHorca.innerHTML = "";
+    mensajeFinDelJuego.innerHTML = "";
 }
 
 function reiniciarVariablesDeJuego() {
@@ -49,10 +50,13 @@ function terminarJuego(ganaElJuego) {
 
 function mostrarMensaje(ganaElJuego) {
     mensajeFinDelJuego.classList.remove("ocultar");
+    mensajeFinDelJuego.style.display = "flex";
+    mensajeFinDelJuego.style.alignSelf = "center";
+
     if (ganaElJuego) {
         mensajeFinDelJuego.textContent = "Ganaste, ¡felicidades!";
     } else {
-        mensajeFinDelJuego.textContent = "¡Fin del juego!";
+        mensajeFinDelJuego.textContent = `¡Fin del juego! La palabra era: ${palabraSecreta}`;
     }
 
 }

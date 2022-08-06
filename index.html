@@ -4,57 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Alura Challenge - Oracle ONE Juego del Ahorcado</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:wght@300&display=swap"
           rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/seccion__menu-inicio/seccion__menu-inicio.css" rel="stylesheet">
+    <link href="css/seccion__tablero-juego/seccion__tablero-juego.css" rel="stylesheet">
+    <link href="css/seccion__menu-agregar-palabra/seccion__menu-agregar-palabra.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
 </head>
 
 <body>
 
 <header>
     <section id="logo-alura">
-        <img src="img/logo.png" alt="Logo">
+        <img src="img/logo_alura.svg" alt="Logo">
     </section>
 </header>
 
 <main>
-
-    <section id="seccion-menu-inicio">
-        <div id="contenedor-botones-menu-inicio">
-            <button id="boton-iniciar-juego" class="boton">Iniciar juego</button>
-            <button id="boton-menu-agregar-nueva-palabra" class="boton">Agregar nueva palabra</button>
+    <section id="seccion__menu-inicio">
+        <div id="seccion__menu-inicio__contenedor-botones">
+            <button id="boton__iniciar-juego" class="boton">Iniciar juego</button>
+            <button id="boton__menu-agregar-nueva-palabra" class="boton">Agregar nueva palabra</button>
         </div>
     </section>
 
-    <section id="seccion-tablero-juego" class="ocultar">
-        <div id="contenedor-tablero-juego">
-            <div id="contenedor-horca"></div>
-
-            <div id="contenedor-letras">
+    <section id="seccion__tablero-juego" class="ocultar">
+        <div id="seccion__tablero-juego__contenedor-tablero">
+            <div id="tablero-juego__contenedor-horca">
+            </div>
+            <div id="tablero-juego__contenedor-letras">
                 <div id="contenedor-letras-palabra-secreta"></div>
                 <div id="contenedor-letras-incorrectas"></div>
             </div>
 
             <span id="mensaje-fin-del-juego" class="ocultar"></span>
 
-            <div id="contenedor-botones-tablero-juego">
+            <div id="tablero-juego__contenedor-botones">
                 <button id="boton-nuevo-juego">Nuevo juego</button>
                 <button id="boton-desistir">Desistir</button>
             </div>
         </div>
     </section>
 
-    <section id="seccion-agregar-palabra" class="ocultar">
-        <form id="form-agregar-palabra">
-            <div id="contenedor-texto-agregar-palabra">
-                <label for="area-texto-agregar-palabra"></label>
-                <textarea id="area-texto-agregar-palabra" maxlength="8" placeholder="Ingrese una palabra"></textarea>
+    <section id="seccion__menu-agregar-palabra" class="ocultar">
+        <form id="formulario-agregar-palabra">
+            <div id="formulario-agregar-palabra__contenedor-texto">
+                <label for="formulario-agregar-palabra__contenedor-texto__area-texto"></label>
+                <textarea id="formulario-agregar-palabra__contenedor-texto__area-texto" maxlength="8"
+                          placeholder="Ingrese una palabra"></textarea>
             </div>
 
-            <span id="mensaje-estado-palabra-agregada"></span>
+            <span id="span__mensaje-palabra-agregada"></span>
 
             <div id="contenedor-contrato-nueva-palabra">
                 <img src="img/signo-exclamacion.png" alt="!" id="circulo-exclamacion">
@@ -67,7 +73,6 @@
             </div>
         </form>
     </section>
-
 </main>
 
 <script src="js/variables-de-elementos-html.js"></script>
@@ -79,10 +84,10 @@
 
 
 <footer>
-    <section id="seccion-copyright">
-        <h2>
-            &copy; 2022 - Juan Elías Ribeiro
-        </h2>
+    <section id="seccion__creditos">
+        <a href="https://github.com/Juan-Ribeiro" title="Mi perfil de GitHub">
+            Desarrollado por Juan Elias Ribeiro - 2022
+        </a>
     </section>
 </footer>
 </body>

@@ -1,0 +1,27 @@
+
+#seccion__menu-inicio__contenedor-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+
+    vertical-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#boton__iniciar-juego {
+    width: 317px;
+    height: 114px;
+    background: #0A3871;
+    color: white;
+}
+
+#boton__menu-agregar-nueva-palabra {
+    width: 280px;
+    height: 67px;
+    background: white;
+
+    color: var(--color_azul-oscuro);
+    border-color: var(--color_azul-oscuro);
+    border-style: solid;
+}

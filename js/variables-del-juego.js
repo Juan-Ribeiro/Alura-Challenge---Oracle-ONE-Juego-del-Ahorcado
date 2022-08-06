@@ -1,6 +1,6 @@
 const letrasAdmitidas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-let listaDePalabrasSecretas = ["HOLA", "CHAU", "PRUEBA", "PALABRA", "COSA", "CAJA", "UNO", "DOS", "TRES"];
+let listaDePalabrasSecretas = ["HOLA", "ADIOS", "ALURA", "PALABRA", "MUSICA", "ESTUDIO"];
 
 let letrasIncorrectasIngresadas = "";
 
