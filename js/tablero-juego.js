@@ -18,11 +18,12 @@ function ocultarMensajeFinDelJuego() {
         mensajeFinDelJuego.classList.add("ocultar");
     }
 }
+
 function iniciarNuevoJuego() {
     limpiarContenedorTablero();
     reiniciarVariablesDeJuego();
     visualizarContenedorLetrasDePalabraSecreta();
-    
+
     document.addEventListener("keypress", validarTeclaPresionada);
 }
 
@@ -53,12 +54,9 @@ function mostrarMensaje(ganaElJuego) {
     mensajeFinDelJuego.style.display = "flex";
     mensajeFinDelJuego.style.alignSelf = "center";
 
-    if (ganaElJuego) {
-        mensajeFinDelJuego.textContent = "Ganaste, ¡felicidades!";
-    } else {
+    ganaElJuego ?
+        mensajeFinDelJuego.textContent = "Ganaste, ¡felicidades!" :
         mensajeFinDelJuego.textContent = `¡Fin del juego! La palabra era: ${palabraSecreta}`;
-    }
-
 }
 
 function mostrarMensajeDeVictoria() {
@@ -79,8 +77,7 @@ function validarTeclaPresionada(eventoTecla) {
     if (!palabraSecreta.includes(teclaPresionada) && !letrasIncorrectasIngresadas.includes(teclaPresionada)) {
         letrasIncorrectasIngresadas += teclaPresionada;
         cantidadDeIntentosFallidos++;
-        
-        agregarLetraIncorrectaATabla(teclaPresionada);        
+        agregarLetraIncorrectaATabla(teclaPresionada);
         dibujarAhorcado(cantidadDeIntentosFallidos);
 
         if (cantidadDeIntentosFallidos >= 7) {
@@ -89,8 +86,10 @@ function validarTeclaPresionada(eventoTecla) {
         return;
     }
 
-    if (palabraSecreta.includes(teclaPresionada)) {
+    if (palabraSecreta.includes(teclaPresionada) && !letrasCorrectasIngresadas.includes(teclaPresionada)) {
+        letrasCorrectasIngresadas += teclaPresionada;
         agregarLetraCorrectaATabla(teclaPresionada);
+
         if (cantidadDeIntentosAcertados === palabraSecreta.length) {
             terminarJuego(true);
         }
@@ -104,7 +103,7 @@ function agregarLetraCorrectaATabla(letra) {
             indices.push(i);
         }
     }
-    
+
     cantidadDeIntentosAcertados += indices.length;
 
     let letraActual;
