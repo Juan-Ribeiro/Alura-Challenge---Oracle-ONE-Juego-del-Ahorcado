@@ -5,7 +5,6 @@ botonNuevoJuego.addEventListener("click", function () {
 botonDesistir.addEventListener("click", function () {
     limpiarContenedorTablero();
     ocultarMensajeFinDelJuego();
-    botonDesistir.textContent = "Desistir";
 
     document.removeEventListener("keypress", validarTeclaPresionada);
 
@@ -32,6 +31,7 @@ function limpiarContenedorTablero() {
     contenedorLetrasIncorrectas.innerHTML = "";
     contenedorHorca.innerHTML = "";
     mensajeFinDelJuego.innerHTML = "";
+    botonDesistir.textContent = "Desistir";
 }
 
 function reiniciarVariablesDeJuego() {
@@ -41,6 +41,27 @@ function reiniciarVariablesDeJuego() {
     cantidadDeIntentosAcertados = 0;
     letrasIncorrectasIngresadas = "";
 
+}
+
+function asignarNuevaPalabraSecretaAlAzar() {
+    let numAleatorio = Math.floor(Math.random() * listaDePalabrasSecretas.length);
+    palabraSecreta = listaDePalabrasSecretas[numAleatorio];
+}
+
+function visualizarContenedorLetrasDePalabraSecreta() {
+    for (let i = 0; i < palabraSecreta.length; i++) {
+        let contenedorLetra = document.createElement("div");
+        let letra = document.createElement("div");
+        let rayaLetra = document.createElement("div");
+
+        letra.classList.add("letra-palabra-secreta");
+        rayaLetra.classList.add("raya-letra-palabra-secreta");
+
+        contenedorLetra.appendChild(letra);
+        contenedorLetra.appendChild(rayaLetra);
+
+        contenedorLetrasPalabraSecreta.appendChild(contenedorLetra);
+    }
 }
 
 function terminarJuego(ganaElJuego) {
