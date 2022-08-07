@@ -40,7 +40,7 @@ function reiniciarVariablesDeJuego() {
     cantidadDeIntentosFallidos = 0;
     cantidadDeIntentosAcertados = 0;
     letrasIncorrectasIngresadas = "";
-
+    letrasCorrectasIngresadas = "";
 }
 
 function asignarNuevaPalabraSecretaAlAzar() {
